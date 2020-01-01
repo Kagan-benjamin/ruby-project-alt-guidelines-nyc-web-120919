@@ -1,3 +1,7 @@
 require_relative '../config/environment'
 
-puts "hello world"
+def start
+    old_logger = ActiveRecord::Base.logger
+    ActiveRecord::Base.logger = nil
+end
+start()
